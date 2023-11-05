@@ -1,31 +1,15 @@
 # Function to calculate confidence intervals to stock volatility
-confidence_interval <- function(stock_price,
-                                expected_return,
-                                volatility,
-                                time_to_maturity){
-  # Calculate
-  mean_for_ci <- log(stock_price) + 
-    (expected_return - ((volatility ^ 2) / 2)) *
-    time_to_maturity
+confidence_interval <- function(p, r, v, y, rg = 95){
   
-  # Calculate sd
-  sd_for_ci <- (volatility ^ 2 * time_to_maturity) ^ 0.5
+  mean.ci <- log(p) + (r - v ^ 2 / 2) * y # Mean
   
-  # Calculate lower bound
-  lower_bound <- exp(mean_for_ci + qnorm(0.025) * sd_for_ci)
+  sd.ci <- (v ^ 2 * y) ^ .5 # Standard Deviation
   
-  # Calculate upper bound
-  upper_bound <- exp(mean_for_ci + qnorm(0.975) * sd_for_ci)
+  lower_bound <- exp(mean.ci + qnorm((100 - rg) / 200) * sd.ci) # Lower Bound
   
-  # Put values into text
-  text_for_ci <- sprintf("There is 95%% probability that the stock price will lie between %.2f and %.2f.",
-                         lower_bound,
-                         upper_bound)
-  # Display text
-  return(text_for_ci)
+  upper_bound <- exp(mean.ci+qnorm(rg*.01 + (100-rg)/200)*sd.ci) # Upper Bound
+  
+  sprintf("%s%% probability stock price will be between %.2f and %.2f.",
+          rg, lower_bound, upper_bound) # Values in text
 }
-# Test
-confidence_interval(stock_price = 40,
-                    expected_return = 0.16,
-                    volatility = 0.2,
-                    time_to_maturity = 0.5)
+confidence_interval(p = 40, r = .16, v = .2, y = .5, 99) # Test
