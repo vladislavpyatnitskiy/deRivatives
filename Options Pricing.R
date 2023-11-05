@@ -18,11 +18,11 @@ delta.calculator <- function(x, k, r, y){
     call.t <- rbind(call.t, round(s.p*pnorm(d.1) - k.p*exp(-r*y)*pnorm(d.2),2))
     put.t <- rbind(put.t, round(k.p*exp(-r*y)*pnorm(-d.2) - s.p*pnorm(-d.1),2)) }
     
-    options.t <- data.frame(as.matrix(call.t), as.matrix(put.t)) # Merge tables
+  options.t <- data.frame(as.matrix(call.t), as.matrix(put.t)) # Merge tables
     
-    colnames(options.t) <- c("Call", "Put") # Assign column names
-    rownames(options.t) <- colnames(x) # Assign row names
+  colnames(options.t) <- c("Call", "Put") # Assign column names
+  rownames(options.t) <- colnames(x) # Assign row names
     
-    options.t # Display values
+  options.t # Display values
 }
 delta.calculator(stock_data, k = 3,r = 0.055, y = 1) # Test
