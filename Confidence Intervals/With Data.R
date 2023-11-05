@@ -1,59 +1,27 @@
 # Calculate Confidence interval
-confidence_intrvl <- function(stock_price, time_to_maturity,
-                              interval_values = c(0.025, 0.975)){
-  # Log returns
-  volatility <- diff(log(stock_price))[-1,]
+confidence.intervals <- function(s, y, i.values=c(0.025, 0.975)){
   
-  # Calculate volatility
-  volatility <- apply(volatility, 2, function(col) sd(col)) * (252 ^ 0.5) 
+  v <- apply(s, 2, function(col) sd(diff(log(s))[-1,]))*(252^.5) # Volatility
   
-  # Select last price
-  price_ci <- stock_price[nrow(stock_price),]
+  r <- as.matrix(s[nrow(s),])/as.matrix(s[nrow(s)-252,]) - 1 # Expected Return
   
-  # Calculate expected return
-  expected_return <- as.matrix(stock_price[nrow(stock_price),]) /
-    as.matrix(stock_price[nrow(stock_price)-252,]) - 1
+  b.array <- NULL # Empty variable for lower & upper bounds values
   
   # Create empty variable to contain values for lower & upper bounds
-  array_bound <- NULL
-  
-  # Create empty variable to contain values for lower & upper bounds
-  for (m in 1:length(interval_values)){
+  for (m in 1:length(i.values)){ b.list <- NULL
     
-    # Create empty variable to contain values for lower & upper bounds
-    bound_values_list <- NULL
+    for (n in 1:ncol(s)){ mean.ci <- log(s[nrow(s),][,n]) + (r[,n]-v[n]^2/2)*y 
+      
+      b.list <- rbind(b.list,exp(mean.ci + qnorm(i.values[m])*(v[n]^2*y)^.5))} 
     
-    # For each column 
-    for (n in 1:ncol(stock_price)){
-      
-      # Calculate mean
-      mean_for_ci <- log(price_ci[,n]) + 
-        (expected_return[,n] - (((volatility[n]) ^ 2) / 2)) * time_to_maturity
-      
-      # Calculate sd
-      sd_for_ci <- ((volatility[n]) ^ 2 * time_to_maturity) ^ 0.5
-      
-      # Calculate value for bound
-      bound_values <- exp(mean_for_ci + qnorm(interval_values[m]) * sd_for_ci)
-      
-      # Add bound value to data frame
-      bound_values_list <-rbind(bound_values_list, bound_values) }
-    
-    # Lower Bound & Upper Bound
-    array_bound <- cbind(array_bound, bound_values_list) }
+    b.array <- cbind(b.array, b.list) } # Lower & Upper Bounds
   
-  # Give column names
-  colnames(array_bound) <- c("Lower Bound", "Upper Bound")
+  colnames(b.array) <- c("Lower Bound", "Upper Bound") # Give column names
   
-  # Make it matrix
-  array_bound <- as.matrix(array_bound)
+  b.array <- as.matrix(b.array) # Make it matrix
   
-  # Give row names
-  rownames(array_bound) <- colnames(stock_price)
+  rownames(b.array) <- colnames(s) # Give row names
   
-  # Display text
-  return(array_bound)
+  return(b.array) # Display text
 }
-# Test
-confidence_intrvl(stock_price = stock_data, time_to_maturity = 0.25,
-                  interval_values = c(0.025, 0.975))
+confidence.intervals(s=stock_data,y=.25,i.values=c(.025,.975)) # Test
