@@ -1,27 +1,28 @@
 # Calculate Confidence interval
-confidence.intervals <- function(s, y, i.values=c(0.025, 0.975)){
+confidence.intervals <- function(s, y, i = 0.025){
   
-  v <- apply(s, 2, function(col) sd(diff(log(s))[-1,]))*(252^.5) # Volatility
+  i <- c(i, 1 - i) # Confidence Intervals setting up
+  
+  V <- apply(s, 2, function(col) sd(diff(log(s))[-1,]))*(252^.5) # Volatility
   
   r <- as.matrix(s[nrow(s),])/as.matrix(s[nrow(s)-252,]) - 1 # Expected Return
   
-  b.array <- NULL # Empty variable for lower & upper bounds values
+  A <- NULL # Empty variable for lower & upper bounds values
   
-  # Create empty variable to contain values for lower & upper bounds
-  for (m in 1:length(i.values)){ b.list <- NULL
+  for (j in 1:length(i)){ l <- NULL
+  
+    for (n in 1:ncol(s)){ m <- log(s[nrow(s),][,n]) + (r[,n] - V[n]^2 / 2) * y 
     
-    for (n in 1:ncol(s)){ mean.ci <- log(s[nrow(s),][,n]) + (r[,n]-v[n]^2/2)*y 
-      
-      b.list <- rbind(b.list,exp(mean.ci + qnorm(i.values[m])*(v[n]^2*y)^.5))} 
+      l <- rbind(l, exp(m + qnorm(i[j]) * (V[n] ^ 2 * y) ^ .5)) } 
     
-    b.array <- cbind(b.array, b.list) } # Lower & Upper Bounds
+    A <- cbind(A, l) } # Lower & Upper Bounds
+    
+  colnames(A) <- c("Lower Bound", "Upper Bound") # Give column names
   
-  colnames(b.array) <- c("Lower Bound", "Upper Bound") # Give column names
+  A <- as.matrix(A) # Make it matrix
   
-  b.array <- as.matrix(b.array) # Make it matrix
+  rownames(A) <- colnames(s) # Give row names
   
-  rownames(b.array) <- colnames(s) # Give row names
-  
-  return(b.array) # Display text
+  return(A) # Display text
 }
-confidence.intervals(s=stock_data,y=.25,i.values=c(.025,.975)) # Test
+confidence.intervals(s = stock_data, y = .25, i = .025) # Test
