@@ -13,9 +13,13 @@ This repository focuses on financial derivatives, covering fundamental pricing m
 
 ### 2. Trading Strategies
 A collection of options trading strategies used for hedging, speculation, and arbitrage:
-- **Bull Spread** – A strategy using call options to profit from moderate price increases.
-- **Bear Spread** – A strategy using put options to profit from moderate price decreases.
-- **Butterfly Spread** – A neutral strategy involving multiple strike prices.
+
+#### Spreads
+- **Bull** – A strategy using call options to profit from moderate price increases.
+- **Bear** – A strategy using put options to profit from moderate price decreases.
+- **Butterfly** – A neutral strategy involving multiple strike prices.
+
+#### Combinations
 - **Straddle** – A volatility-based strategy using both call and put options.
 - **Strangle** – A variation of the straddle with different strike prices.
 - **Strip** – A strategy betting on higher volatility with more puts than calls.
