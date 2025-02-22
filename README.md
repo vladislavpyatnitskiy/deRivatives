@@ -15,7 +15,15 @@ This repository focuses on financial derivatives, covering fundamental pricing m
 A collection of options trading strategies used for hedging, speculation, and arbitrage:
 
 #### Spreads
-- **Bull** – A strategy using call options to profit from moderate price increases.
+##### Bull
+**a strategy using call options to profit from moderate price increases.**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bull%20Spread%20Using%20Calls.png?raw=true)
+   **Fig. 1. Bull Spread using Calls**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bull%20Spread%20Using%20Puts.png?raw=true)
+  **Fig. 2. Bull Spread using Puts**
+  
 - **Bear** – A strategy using put options to profit from moderate price decreases.
 - **Butterfly** – A neutral strategy involving multiple strike prices.
 
