@@ -24,7 +24,15 @@ A collection of options trading strategies used for hedging, speculation, and ar
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bull%20Spread%20Using%20Puts.png?raw=true)
   **Fig. 2. Bull Spread using Puts**
   
-- **Bear** – A strategy using put options to profit from moderate price decreases.
+##### Bear
+**a strategy using put options to profit from moderate price decreases.**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bear%20Spread%20Using%20Calls.png?raw=true)
+   **Fig. 3. Bear Spread using Calls**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bear%20Spread%20Using%20Puts.png?raw=true)
+  **Fig. 4. Bear Spread using Puts**
+  
 - **Butterfly** – A neutral strategy involving multiple strike prices.
 
 #### Combinations
