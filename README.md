@@ -32,8 +32,15 @@ A collection of options trading strategies used for hedging, speculation, and ar
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bear%20Spread%20Using%20Puts.png?raw=true)
   **Fig. 4. Bear Spread using Puts**
-  
-- **Butterfly** – A neutral strategy involving multiple strike prices.
+
+##### Butterfly
+**a neutral strategy involving multiple strike prices.**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Butterfly%20Spread%20Using%20Calls.png?raw=true)
+   **Fig. 5. Butterfly Spread using Calls**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Butterfly%20Spread%20Using%20Puts.png?raw=true)
+  **Fig. 6. Butterfly Spread using Puts**
 
 #### Combinations
 - **Straddle** – A volatility-based strategy using both call and put options.
