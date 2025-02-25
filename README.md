@@ -43,7 +43,12 @@ A collection of options trading strategies used for hedging, speculation, and ar
   **Fig. 6. Butterfly Spread using Puts**
 
 #### Combinations
-- **Straddle** – A volatility-based strategy using both call and put options.
+##### Straddle
+**a volatility-based strategy using both call and put options.**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Straddle%20Combination.png?raw=true)
+   **Fig. 7. Straddle Combination**
+
 - **Strangle** – A variation of the straddle with different strike prices.
 - **Strip** – A strategy betting on higher volatility with more puts than calls.
 - **Strap** – Similar to the strip but with more calls than puts.
