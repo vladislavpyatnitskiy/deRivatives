@@ -49,7 +49,12 @@ A collection of options trading strategies used for hedging, speculation, and ar
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Straddle%20Combination.png?raw=true)
    **Fig. 7. Straddle Combination**
 
-- **Strangle** – A variation of the straddle with different strike prices.
+##### Strangle
+**a variation of the straddle with different strike prices.**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Strangle%20Combination.png?raw=true)
+   **Fig. 8. Strangle Combination**
+
 - **Strip** – A strategy betting on higher volatility with more puts than calls.
 - **Strap** – Similar to the strip but with more calls than puts.
 
