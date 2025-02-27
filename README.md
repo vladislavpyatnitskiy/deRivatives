@@ -55,7 +55,12 @@ A collection of options trading strategies used for hedging, speculation, and ar
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Strangle%20Combination.png?raw=true)
    **Fig. 8. Strangle Combination**
 
-- **Strip** – A strategy betting on higher volatility with more puts than calls.
+##### Strip
+**a strategy betting on higher volatility with more puts than calls.**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Strip.png?raw=true)
+   **Fig. 9. Strip Combination**
+
 - **Strap** – Similar to the strip but with more calls than puts.
 
 ### 3. Confidence Intervals
