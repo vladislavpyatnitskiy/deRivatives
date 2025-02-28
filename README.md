@@ -61,7 +61,11 @@ A collection of options trading strategies used for hedging, speculation, and ar
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Strip.png?raw=true)
    **Fig. 9. Strip Combination**
 
-- **Strap** – Similar to the strip but with more calls than puts.
+##### Strap
+**a similar to the strip but with more calls than puts.**
+
+  ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Strap.png?raw=true)
+   **Fig. 10. Strap Combination**
 
 ### 3. Confidence Intervals
 - Estimating confidence intervals for derivative pricing models.
