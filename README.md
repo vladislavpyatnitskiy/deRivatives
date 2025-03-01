@@ -6,6 +6,9 @@
 ## Overview
 This repository focuses on financial derivatives, covering fundamental pricing models, trading strategies, and risk management techniques. The goal is to provide well-documented implementations in R for analysing and understanding derivative instruments.
 
+![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Stock%20vs%20Options%20PNL.png?raw=true)
+**Fig. 1. Comparison of pay-offs between buying stocks and options**
+
 ## Topics Covered
 
 ### 1. Binomial Trees
@@ -19,53 +22,53 @@ A collection of options trading strategies used for hedging, speculation, and ar
 **a strategy using call options to profit from moderate price increases.**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bull%20Spread%20Using%20Calls.png?raw=true)
-   **Fig. 1. Bull Spread using Calls**
+   **Fig. 2. Bull Spread using Calls**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bull%20Spread%20Using%20Puts.png?raw=true)
-  **Fig. 2. Bull Spread using Puts**
+  **Fig. 3. Bull Spread using Puts**
   
 ##### Bear
 **a strategy using put options to profit from moderate price decreases.**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bear%20Spread%20Using%20Calls.png?raw=true)
-   **Fig. 3. Bear Spread using Calls**
+   **Fig. 4. Bear Spread using Calls**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Bear%20Spread%20Using%20Puts.png?raw=true)
-  **Fig. 4. Bear Spread using Puts**
+  **Fig. 5. Bear Spread using Puts**
 
 ##### Butterfly
 **a neutral strategy involving multiple strike prices.**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Butterfly%20Spread%20Using%20Calls.png?raw=true)
-   **Fig. 5. Butterfly Spread using Calls**
+   **Fig. 6. Butterfly Spread using Calls**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Spreads/Butterfly%20Spread%20Using%20Puts.png?raw=true)
-  **Fig. 6. Butterfly Spread using Puts**
+  **Fig. 7. Butterfly Spread using Puts**
 
 #### Combinations
 ##### Straddle
 **a volatility-based strategy using both call and put options.**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Straddle%20Combination.png?raw=true)
-   **Fig. 7. Straddle Combination**
+   **Fig. 8. Straddle Combination**
 
 ##### Strangle
 **a variation of the straddle with different strike prices.**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Strangle%20Combination.png?raw=true)
-   **Fig. 8. Strangle Combination**
+   **Fig. 9. Strangle Combination**
 
 ##### Strip
 **a strategy betting on higher volatility with more puts than calls.**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Strip.png?raw=true)
-   **Fig. 9. Strip Combination**
+   **Fig. 10. Strip Combination**
 
 ##### Strap
 **a similar to the strip but with more calls than puts.**
 
   ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Combos/Strap.png?raw=true)
-   **Fig. 10. Strap Combination**
+   **Fig. 11. Strap Combination**
 
 ### 3. Confidence Intervals
 - Estimating confidence intervals for derivative pricing models.
