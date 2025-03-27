@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/vladislavpyatnitskiy/deRivatives.svg)
 
 ## Overview
-This repository focuses on financial derivatives, covering fundamental pricing models, trading strategies, and risk management techniques. The goal is to provide well-documented implementations in R for analysing and understanding derivative instruments.
+This repository focuses on financial derivatives, covering fundamental pricing models, trading strategies and risk management techniques. The goal is to provide well-documented implementations in R for analysing and understanding derivative instruments.
 
 ![](https://github.com/vladislavpyatnitskiy/deRivatives/blob/main/Trading%20Strategies%20Visualisation/Plots/Stock%20vs%20Options%20PNL.png?raw=true)
 **Fig. 1. Comparison of pay-offs between buying stocks and options**
@@ -15,7 +15,7 @@ This repository focuses on financial derivatives, covering fundamental pricing m
 - Implementation of binomial tree models for pricing options.
 
 ### 2. Trading Strategies
-A collection of options trading strategies used for hedging, speculation, and arbitrage:
+A collection of options trading strategies used for hedging, speculation and arbitrage:
 
 #### Spreads
 ##### Bull
@@ -80,3 +80,16 @@ A collection of options trading strategies used for hedging, speculation, and ar
 - **Vega** – Measures sensitivity to volatility changes in the underlying asset.
 - **Rho** – Measures sensitivity to interest rate changes.
 - Applications of Greeks in risk management and portfolio hedging.
+
+```
+             Call         Put
+Delta  0.05417375 -0.06985850
+Theta -4.30538996 -1.85300567
+Gamma  0.06554538  0.06554538
+Vega  12.10524275 12.10524275
+Rho    8.90657410 -9.95716588
+```
+
+## References
+
+Hull, J.C. (2015) Options, Futures, and other derivatives. 9th edn. Pearson Education.
